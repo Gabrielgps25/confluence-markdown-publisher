@@ -1,0 +1,28 @@
+{
+  "url": "http://localhost:8090",
+  "username": "admin",
+  "password": "ga0ea94!!",
+  "space": "CNP",
+
+  "parentTitle": "Confluence dotNet Publisher Test",
+  "pages": [
+    {
+      "title": "First Page",
+      "markdownPath": "firstPage.md",
+
+      "chieldPages": [
+        {
+          "title": "First Page Chield1",
+          "markdownPath": "chield.md",
+        }
+      ],
+      "attachments": [
+        {
+          "filePath": "images/cert.jpg",
+          "comment": "My beautiful picture.",
+          "fileType": "image/jpeg"
+        }
+      ]
+    }
+  ] 
+}

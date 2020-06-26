@@ -1,0 +1,82 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "page": {
+      "description": "List of Pages to be published under parent page",
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "The Page title to be generated on Confluence Space",
+          "type": "string"
+        },
+        "markdownPath": {
+          "description": "The Markdown Notation Path to be published",
+          "type": "string"
+        },
+        "attachments": {
+          "description": "List of Attachments to be published in page",
+          "type": "array",
+          "items": {
+            "filePath": {
+              "description": "The Absolute Attachment File Path",
+              "type": "string"
+            },
+            "fileType": {
+              "description": "The file type",
+              "type": "string"
+            },
+            "comment": {
+              "description": "The file comment",
+              "type": "string"
+            },
+            "required": [ "filePath", "fileType", "comment" ]
+          },
+          "uniqueItems": true
+        },
+        "chieldPages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/page"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [ "title", "markdownPath" ],
+      "additionalProperties": false
+    }
+  },
+  "title": "ConfluencePublisherConfig",
+  "description": "A Confluence Publisher Tool Configuration",
+  "type": "object",
+  "properties": {
+    "url": {
+      "description": "The Confluence API URI",
+      "type": "string"
+    },
+    "username": {
+      "description": "The Confluence API Username",
+      "type": "string"
+    },
+    "password": {
+      "description": "The Confluence API User Password",
+      "type": "string"
+    },
+    "space": {
+      "description": "The Confluence Space to publish pages",
+      "type": "string"
+    },
+    "parentTitle": {
+      "description": "The Parent Page title to be used as this page parent",
+      "type": "string"
+    },
+    "pages": {
+      "description": "List of Pages to be published under parent page",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/page"
+      }
+    }
+  },
+  "required": [ "url", "username", "password", "space", "parentTitle", "pages" ],
+  "additionalProperties": false
+}

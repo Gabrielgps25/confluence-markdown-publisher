@@ -1,0 +1,4 @@
+obj/
+nupkg/
+bin/
+*.dll

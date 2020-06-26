@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConfluencePublisher": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\Gabriel\\Projects\\dotnet-confluence-publisher"
+    }
+  }
+}
