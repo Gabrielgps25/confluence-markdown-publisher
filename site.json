@@ -1,7 +1,7 @@
 {
   "url": "http://localhost:8090",
   "username": "admin",
-  "password": "ga0ea94!!",
+  "password": "admin123",
   "space": "CNP",
 
   "parentTitle": "Confluence dotNet Publisher Test",
@@ -20,7 +20,7 @@
         {
           "filePath": "images/cert.jpg",
           "comment": "My beautiful picture.",
-          "fileType": "image/jpeg"
+          "mediaType": "image/jpeg"
         }
       ]
     }

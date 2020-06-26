@@ -18,18 +18,18 @@
           "type": "array",
           "items": {
             "filePath": {
-              "description": "The Absolute Attachment File Path",
+              "description": "The Attachment File Path",
               "type": "string"
             },
-            "fileType": {
-              "description": "The file type",
+            "mediaType": {
+              "description": "The file mediaType e.g: img/jpg",
               "type": "string"
             },
             "comment": {
               "description": "The file comment",
               "type": "string"
             },
-            "required": [ "filePath", "fileType", "comment" ]
+            "required": [ "filePath", "mediaType", "comment" ]
           },
           "uniqueItems": true
         },

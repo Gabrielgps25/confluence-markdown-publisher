@@ -1,4 +1,5 @@
 obj/
 nupkg/
 bin/
+.vs/
 *.dll
